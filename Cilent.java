@@ -1,29 +1,17 @@
-package FP;
+package PPP;
 
 /**
  * øÕªß∂À≤‚ ‘¿‡
  */
 public class Cilent {
     public static void main(String[] args) {
-        NetworkDevice nd1,nd2,nd3,nd4,nd5;
-        DeviceFactory df =new DeviceFactory();
+        Email email,copyEmail;
+        email = new Email();
+        copyEmail = (Email)email.clone();
+        System.out.println("email==copyEmail?");
+        System.out.println(email==copyEmail);
+        System.out.println("email.getAttachment==copyEmail.getAttachment?");
+        System.out.println(email.getAttachment()==copyEmail.getAttachment());
 
-        nd1 = df.getNetworkDevice("cisco");
-        nd1.use();
-
-        nd2 = df.getNetworkDevice("cisco");
-        nd2.use();
-
-        nd3 = df.getNetworkDevice("cisco");
-        nd3.use();
-
-        nd4 = df.getNetworkDevice("tp");
-        nd4.use();
-
-        nd5 = df.getNetworkDevice("tp");
-        nd5.use();
-
-        System.out.println("Total Deviece:" + df.getTotalDevice());
-        System.out.println("Total Terminal:" + df.getTotalTerminal());
     }
 }
